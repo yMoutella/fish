@@ -3,6 +3,8 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+alias ls='exa -l'
+
 set -g theme_display_git yes
 set -g theme_display_git_dirty yes
 set -g theme_display_git_untracked yes
