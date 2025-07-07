@@ -1,5 +1,4 @@
 if status is-interactive
-    source ~/.local/share/omf
 end
 
 alias ls='exa -l'
@@ -49,3 +48,10 @@ set -gx EDITOR nvim
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+set --export NVM_DIR "$HOME/.nvm"
+
+set FNM_PATH "/home/moutella/.local/share/fnm"
+if [ -d "$FNM_PATH" ]
+    set PATH "$FNM_PATH" $PATH
+    fnm env | source
+end
